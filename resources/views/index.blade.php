@@ -156,6 +156,4 @@
         </div>
     </main>
 
-
-
 @include('partials.footer')
