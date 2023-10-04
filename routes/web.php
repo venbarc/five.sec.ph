@@ -16,4 +16,13 @@ use Illuminate\Support\Facades\Route;
 
 Route::controller(UserController::class)->group(function(){
     Route::get('/', 'index');
+    Route::get('/login', 'login');
+    Route::get('/register', 'register');
+    Route::get('/categories', 'show');
+
+    Route::get('/logout/user', 'logout');
+
+    Route::post('/register/create', 'create_user');
+    Route::post('/login/user', 'login_user');
+
 });

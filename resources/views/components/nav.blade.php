@@ -38,12 +38,15 @@
             {{-- navigation open  --}}
             <nav :class="isOpen ? '' : 'hidden'" class="sm:flex sm:justify-center sm:items-center mt-10">
                 <div class="flex flex-col sm:flex-row font-semibold">
-                    <a class="mt-3 hover:underline sm:mx-3 sm:mt-0" href="#">Home</a>
-                    <a class="mt-3 hover:underline sm:mx-3 sm:mt-0" href="#">Shop</a>
-                    <a class="mt-3 hover:underline sm:mx-3 sm:mt-0" href="#">Categories</a>
-                    <a class="mt-3 hover:underline sm:mx-3 sm:mt-0" href="#">Contact</a>
-                    <a class="mt-3 hover:underline sm:mx-3 sm:mt-0" href="#">Login</a>
-                    <a class="mt-3 hover:underline sm:mx-3 sm:mt-0" href="#">Register</a>
+                    <a class="mt-3 hover:underline sm:mx-3 sm:mt-0" href="/">Home</a>
+                    @auth
+                        <a class="mt-3 hover:underline sm:mx-3 sm:mt-0" href="#">Dashboard</a>
+                        <a class="mt-3 hover:underline text-red-500 sm:mx-3 sm:mt-0" href="/logout/user">Logout</a>
+                    @else
+                        <a class="mt-3 hover:underline sm:mx-3 sm:mt-0" href="#">Contact</a>
+                        <a class="mt-3 hover:underline sm:mx-3 sm:mt-0" href="/login">Login</a>
+                        <a class="mt-3 hover:underline sm:mx-3 sm:mt-0" href="/register">Register</a>
+                    @endauth
                 </div>
             </nav>
             {{-- seaerch bar  --}}

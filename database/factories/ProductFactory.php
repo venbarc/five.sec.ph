@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Faker\Factory as Faker;
 
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Model>
@@ -16,7 +17,7 @@ class ProductFactory extends Factory
      */
     public function definition(): array
     {
-        $faker = \Faker\Factory::create(10);
+        $faker = Faker::create();
 
         return [
             'product_id' => $faker->unique()->randomNumber(),
