@@ -40,7 +40,7 @@
                 <div class="flex flex-col sm:flex-row font-semibold">
                     <a class="mt-3 hover:underline sm:mx-3 sm:mt-0" href="/">Home</a>
                     @auth
-                        <a class="mt-3 hover:underline sm:mx-3 sm:mt-0" href="#">Dashboard</a>
+                        <a class="mt-3 hover:underline sm:mx-3 sm:mt-0" href="/users/dashboard">Dashboard</a>
                         <a class="mt-3 hover:underline text-red-500 sm:mx-3 sm:mt-0" href="/logout/user">Logout</a>
                     @else
                         <a class="mt-3 hover:underline sm:mx-3 sm:mt-0" href="#">Contact</a>
